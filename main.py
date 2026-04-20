@@ -45,3 +45,54 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# #bonus1
+# def average(self):
+#     return sum(self.scores) / len(self.scores)
+#
+#
+# def best(self):
+#     return max(self.scores)
+#
+#
+# def worst(self):
+#     return min(self.scores)
+#
+#
+# def pass_rate(self):
+#     passed = 0
+#     for score in self.scores:
+#         if score >= 50:
+#             passed += 1
+#     return passed / len(self.scores)
+#
+#
+# def __str__(self):
+#     return f"StudentsGrades: {self.count()} studentu, prumer {self.average():.1f}"
+
+#bonus2
+def __init__(self, scores):
+    self.scores = scores
+    self._sorted_scores = None
+
+
+def find_sorted(self, score):
+    if self._sorted_scores is None:
+        print("sorting…")
+        self._sorted_scores = self.get_sorted()
+
+    left = 0
+    right = len(self._sorted_scores) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        mid_value = self._sorted_scores[mid]
+
+        if mid_value == score:
+            return mid
+        elif mid_value < score:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return None

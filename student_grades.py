@@ -48,3 +48,22 @@ class StudentsGrades:
 
         return scores
 
+    # bonus1
+    def average(self):
+        return sum(self.scores) / len(self.scores)
+
+    def best(self):
+        return max(self.scores)
+
+    def worst(self):
+        return min(self.scores)
+
+    def pass_rate(self):
+        passed = 0
+        for score in self.scores:
+            if score >= 50:
+                passed += 1
+        return passed / len(self.scores)
+
+    def __str__(self):
+        return f"StudentsGrades: {self.count()} studentu, prumer {self.average():.1f}"
