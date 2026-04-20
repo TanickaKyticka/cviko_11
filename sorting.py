@@ -15,8 +15,17 @@ def selection_sort(seznam):
     return seznam
 
 
-seznam = [5, 1, 4, 2, 8]
-print(f"Puvodni seznam:" , seznam)
-print(f"Serazeny seznam:", selection_sort(seznam))
-
 #ukol2
+def bubble_sort(seznamek):
+    seznamek = seznamek.copy()
+
+    n = len(seznamek)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if seznamek[j] > seznamek[j + 1]:
+                seznamek[j], seznamek[j + 1] = seznamek[j + 1], seznamek[j]
+
+    return seznamek
+
+#ukol3
