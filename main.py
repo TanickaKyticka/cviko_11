@@ -24,3 +24,24 @@ print(results.get_grade(7))  # F (38 bodů)
 print(results.find(100))  # [6]
 print(results.find(50))   # [4]
 print(results.find(77))   # []
+
+print(results.get_sorted())   # [38, 42, 50, 58, 67, 73, 85, 91, 100]
+print(results.scores)         # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
+
+def main():
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+
+    print("Pocet studentu:", results.count())
+
+    for i in range(results.count()):
+        points = results.get_by_index(i)
+        grade = results.get_grade(i)
+        print(f"Student {i}: {points} points – {grade}")
+
+    print("Studenti se 100 body:", results.find(100))
+
+    print("Serazené vysledky:", results.get_sorted())
+
+
+if __name__ == "__main__":
+    main()
